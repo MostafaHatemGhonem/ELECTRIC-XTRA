@@ -1,38 +1,214 @@
-.App {
-  text-align: center;
+:root {
+  --main-anmation: 15s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.rajdhani-light {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.rajdhani-regular {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.rajdhani-medium {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.rajdhani-semibold {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.rajdhani-bold {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+body {
+  font-family: 'rajdhani-regular', sans-serif;
+}
+
+/* BackGround */
+
+.bgc {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #0a0a0a;
+}
+
+.circle {
+    position: absolute;
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    border: 1px solid #FF5E00;
+    top: 20%;
+    left: 15%;
+    animation: bumb var(--main-anmation) ease-in infinite;
+    z-index: -2;
+}
+
+.square {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 2px solid #00B2FF;
+    top: 50%;
+    left: 25%;
+    animation: rotate var(--main-anmation) ease-in infinite;
+    z-index: -2;
+}
+
+.triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 180px solid rgba(0, 178, 255, 0.2);
+    top: 50%;
+    left: 70%;
+    animation: Justrotate var(--main-anmation) ease-in infinite;
+    z-index: -2;
+}
+
+.fullSquare {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(circle at 20% 50%, rgba(255, 94, 0, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(0, 178, 255, 0.15) 0%, transparent 50%), radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+    top: 0%;
+    left: 0%;
+    animation: rotate 25s ease-in-out infinite;
+    z-index: -1;
+}
+
+
+/* Header */
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  padding: 20px 50px;
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(255, 94, 0, 0.1);
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+    font-family: 'Orbitron', monospace;
+    font-size: 24px;
+    font-weight: 900;
+    background: linear-gradient(45deg, #FF5E00, #00B2FF);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s 
+ease-in-out infinite;
+    text-shadow: 0 0 30px rgba(255, 94, 0, 0.5);
+    width: 50%;
+    font-size: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.links {
+  flex: 1;
+}
+
+.links ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.links ul li {
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #ffff;
+  opacity: 0.7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Anmation */
+
+@keyframes bumb {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes Justrotate {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
+
+@keyframes rotate {
+  0% {
+    transform: translate(0, 0px) rotate(0deg);
+  }
+  50% {
+    transform: translate(0, 80px) rotate(360deg);
+  }
+  100% {
+    transform: translate(0, 0px) rotate(360deg);
+  }
+}
+
