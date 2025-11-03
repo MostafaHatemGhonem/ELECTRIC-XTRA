@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ELECTRIC-XTRA/static/css/main.c2844ca3.css",
+    "main.js": "/ELECTRIC-XTRA/static/js/main.ec06f3ca.js",
+    "index.html": "/ELECTRIC-XTRA/index.html",
+    "main.c2844ca3.css.map": "/ELECTRIC-XTRA/static/css/main.c2844ca3.css.map",
+    "main.ec06f3ca.js.map": "/ELECTRIC-XTRA/static/js/main.ec06f3ca.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c2844ca3.css",
+    "static/js/main.ec06f3ca.js"
+  ]
+}
