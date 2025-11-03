@@ -15,56 +15,71 @@ function BackgroundPage() {
 
 function Header() {
   const [activeLink, setActiveLink] = useState<string | null>("home");
+  const [menuOpen, setMenuOpen] = useState(false); 
 
-  useEffect(() => { 
+  useEffect(() => {
     const sections = document.querySelectorAll("section");
     const handelScroll = () => {
-      let current = "home"
-      sections.forEach((sections) => {
-        const sectionTop = sections.offsetTop;
-        const sectionHeight = sections.offsetHeight;
-        if(window.scrollY >= sectionTop - sectionHeight / 3){
-          current = sections.getAttribute("id") || "home";
+      let current = "home";
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        if (window.scrollY >= sectionTop - sectionHeight / 3) {
+          current = section.getAttribute("id") || "home";
         }
-      })
+      });
       setActiveLink(current);
-    }
-    window.addEventListener("scroll" , handelScroll);
+    };
+    window.addEventListener("scroll", handelScroll);
     return () => {
-      window.removeEventListener("scroll" , handelScroll);
-    }
+      window.removeEventListener("scroll", handelScroll);
+    };
   }, []);
+
   const handleClick = (link: string) => {
     setActiveLink(link);
+    setMenuOpen(false); 
   };
-  
+
   return (
     <div className="header">
       <div className="logo">
-        <span className='logoPhase'>
+        <span className="logoPhase">
           <div className="secondPhase">
             <div className="thirdPhase"></div>
           </div>
         </span>
-        <span className='logoName'>ELECTRIC XTRA</span>
+        <span className="logoName">ELECTRIC XTRA</span>
       </div>
-      <div className="links">
+
+      <div className={`links ${menuOpen ? "active" : ""}`}>
         <ul>
           {["home", "features", "about", "contact"].map((link) => (
-            <li key={link} className={activeLink === link ? "active" : ""}>
-              <a
-                href={`#${link}`}
-                onClick={() => handleClick(link)}
-              >
-                { link.slice(0)}
+            <li
+              key={link}
+              className={activeLink === link ? "active" : ""}
+            >
+              <a href={`#${link}`} onClick={() => handleClick(link)}>
+                {link}
               </a>
             </li>
           ))}
+          <div className="design"></div>
         </ul>
+      </div>
+
+      <div
+        className={`container-menu ${menuOpen ? "active" : ""}`}
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        <div className="menu"></div>
+        <div className="menu"></div>
+        <div className="menu"></div>
       </div>
     </div>
   );
 }
+
 
 function ChangingText({ messages }: { messages: string[] }) {
   const [index, setIndex] = useState(0);
@@ -91,13 +106,13 @@ function Home() {
             <ChangingText messages={["Powering tomorrow's digital revolution today", "Where technology meets infinite possibilities" ,"Enter the next dimension of digital innovation"]} />
           </p>
         </div>
-        <div className="choise">
-          <div className="start button">
-            <a href="#features">Get Started</a>
-          </div>
-          <div className="learnMore button">
-            <a href="#about">Learn More</a>
-          </div>
+      </div>
+      <div className="choise">
+        <div className="start button">
+          <a href="#features">Get Started</a>
+        </div>
+        <div className="learnMore button">
+          <a href="#about">Learn More</a>
         </div>
       </div>
     </section>

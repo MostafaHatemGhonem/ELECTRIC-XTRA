@@ -66,52 +66,52 @@ body {
 }
 
 .circle {
-    position: absolute;
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    border: 1px solid var(--mainColor);
-    top: 20%;
-    left: 15%;
-    animation: bumb var(--main-anmation) ease-in infinite;
-    z-index: -2;
-    opacity: 0.7;
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 1px solid var(--mainColor);
+  top: 20%;
+  left: 15%;
+  animation: bumb var(--main-anmation) ease-in infinite;
+  z-index: -2;
+  opacity: 0.7;
 }
 
 .square {
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    border: 2px solid var(--secondColor);
-    top: 50%;
-    left: 25%;
-    animation: rotate var(--main-anmation) ease-in infinite;
-    opacity: 0.7;
-    z-index: -2;
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border: 2px solid var(--secondColor);
+  top: 50%;
+  left: 25%;
+  animation: rotate var(--main-anmation) ease-in infinite;
+  opacity: 0.7;
+  z-index: -2;
 }
 
 .triangle {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
-    border-bottom: 180px solid rgba(0, 178, 255, 0.2);
-    top: 55%;
-    left: 70%;
-    animation: Justrotate var(--main-anmation) ease-in infinite;
-    z-index: -2;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 180px solid rgba(0, 178, 255, 0.2);
+  top: 55%;
+  left: 70%;
+  animation: Justrotate var(--main-anmation) ease-in infinite;
+  z-index: -2;
 }
 
 .fullSquare {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background: var(--pageGradietnt);
-    top: 0%;
-    left: 0%;
-    animation: rotate 25s ease-in-out infinite;
-    z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: var(--pageGradietnt);
+  top: 0%;
+  left: 0%;
+  animation: rotate 25s ease-in-out infinite;
+  z-index: -1;
 }
 
 
@@ -129,11 +129,12 @@ body {
   transition: all 0.3s ease;
   border-bottom: 1px solid rgba(255, 94, 0, 0.1);
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  flex: 1;
 }
 .logo {
-  width: 55%;
+  width: 50%;
   display: flex;
   align-items: center;
 }
@@ -194,18 +195,29 @@ body {
 
 
 .logoName {
-    font-family: 'Orbitron', monospace;
-    font-size: 25px;
-    margin-left: 10px;
-    font-weight: 900;
-    background: var(--mainGradient);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: glow 2s ease-in-out infinite;
-    text-shadow: 0 0 30px rgba(255, 94, 0, 0.5);
+  font-family: 'rajdhani-bold', monospace;
+  font-size: 25px;
+  margin-left: 10px;
+  font-weight: 900;
+  background: var(--mainGradient);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 2s ease-in-out infinite;
+  text-shadow: 0 0 30px rgba(255, 94, 0, 0.5);
 }
 
-
+@media (max-width: 768px) {
+  .logo {
+    flex: 1;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    width: 65%;
+  }
+  .logoName {
+    font-size: 20px;
+  }
+}
 
 .links {
   flex: 1;
@@ -225,6 +237,62 @@ body {
   border: 1px solid var(--mainColor);
   box-shadow: inset 0 0 8px var(--mainColor);
   padding: 8px 15px;
+}
+
+.design {
+  width: 0;
+}
+
+.menu {
+  background-color: #ff5e00;
+  width: 30px;
+  height: 2px;
+}
+
+.container-menu {
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.container-menu.active .menu:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.container-menu.active .menu:nth-child(2) {
+  opacity: 0;
+}
+
+.container-menu.active .menu:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+
+
+@media (max-width: 768px) {
+  .links ul {
+    flex-direction: column;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    position: absolute;
+    background: rgba(10, 10, 10, 0.95);
+  }
+  .design {
+    width: 100%;
+    height: 50%;
+  }
+  .container-menu  {
+    display: flex;
+  }
 }
 
 .links ul li.active::before {
@@ -299,14 +367,23 @@ body {
   opacity: 0.6;
 }
 
+@media (max-width: 768px) {
+  .mianTitle {
+    font-size: 3rem;
+  }
+  .mainP {
+    font-size: 1.2rem;
+  }
+}
+
 .choise {
-  position: absolute;
-  left: 50%;
-  top: 190%;
-  transform: translate(-50%, -190%);
-  width: 45%;
   display: flex;
   justify-content: space-evenly;
+  position: absolute;
+  top: 70%;
+  width: 80%;
+  text-align: center;
+
 }
 
 .button {
@@ -317,6 +394,7 @@ body {
   overflow: hidden;
   transition: all 0.3s ease;
   display: inline-block;
+  text-align: center;
 }
 
 .button a {
@@ -324,8 +402,9 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-family: 'Orbitron', monospace;
+  font-family: 'rajdhani-bold', monospace;
   font-weight: 700;
+  text-align: center;
 }
 
 .start {
@@ -361,7 +440,20 @@ body {
 }
 
 
-
+@media (max-width: 768px) {
+  .choise {
+    flex-direction: column;
+    width: 50%;
+    left: 50%;
+    gap: 20px;
+    transform: translateX(-50%);
+    align-items: center;
+  }
+  .button {
+    width: fit-content;
+    padding: 10px 35px;
+  }
+}
 
 
 
@@ -418,3 +510,29 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .links {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    background: rgba(10, 10, 10, 0.95);
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
+  .links.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .links ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    height: calc(100vh - 75px);
+  }
+}
