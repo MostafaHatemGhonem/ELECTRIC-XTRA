@@ -1,13 +1,18 @@
 {
   "files": {
-    "main.css": "/ELECTRIC-XTRA/static/css/main.c2844ca3.css",
-    "main.js": "/ELECTRIC-XTRA/static/js/main.ec06f3ca.js",
+    "main.css": "/ELECTRIC-XTRA/static/css/main.999bf7f1.css",
+    "main.js": "/ELECTRIC-XTRA/static/js/main.c09f76ca.js",
+    "static/media/Rajdhani-Bold.ttf": "/ELECTRIC-XTRA/static/media/Rajdhani-Bold.a5a831c1b8c8eb1b83ff.ttf",
+    "static/media/Rajdhani-SemiBold.ttf": "/ELECTRIC-XTRA/static/media/Rajdhani-SemiBold.7d928c2670caba5b9dd6.ttf",
+    "static/media/Rajdhani-Medium.ttf": "/ELECTRIC-XTRA/static/media/Rajdhani-Medium.69a9f7bccb45c01931a2.ttf",
+    "static/media/Rajdhani-Light.ttf": "/ELECTRIC-XTRA/static/media/Rajdhani-Light.7f948ddb3029f1193092.ttf",
+    "static/media/Rajdhani-Regular.ttf": "/ELECTRIC-XTRA/static/media/Rajdhani-Regular.148606c1eb703f6e597a.ttf",
     "index.html": "/ELECTRIC-XTRA/index.html",
-    "main.c2844ca3.css.map": "/ELECTRIC-XTRA/static/css/main.c2844ca3.css.map",
-    "main.ec06f3ca.js.map": "/ELECTRIC-XTRA/static/js/main.ec06f3ca.js.map"
+    "main.999bf7f1.css.map": "/ELECTRIC-XTRA/static/css/main.999bf7f1.css.map",
+    "main.c09f76ca.js.map": "/ELECTRIC-XTRA/static/js/main.c09f76ca.js.map"
   },
   "entrypoints": [
-    "static/css/main.c2844ca3.css",
-    "static/js/main.ec06f3ca.js"
+    "static/css/main.999bf7f1.css",
+    "static/js/main.c09f76ca.js"
   ]
 }
