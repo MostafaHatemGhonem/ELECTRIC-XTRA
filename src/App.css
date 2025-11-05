@@ -228,6 +228,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+  width: 50%;
 }
 
 .links ul li {
