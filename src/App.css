@@ -4,65 +4,67 @@
   --secondColor: #00B2FF;
   --mainGradient: linear-gradient(45deg, var(--mainColor), var(--secondColor));
   --pageGradietnt: radial-gradient(circle at 20% 50%, rgba(255, 94, 0, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(0, 178, 255, 0.15) 0%, transparent 50%), radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  --whiteColor: #fff;
+}
+
+@font-face {
+  font-family: "rajdhani";
+  src: url('../assets/font/Rajdhani-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'rajdhani';
+  src: url('../assets/font/Rajdhani-Regular.ttf') format('truetype');
+
+}
+@font-face {
+  font-family: 'rajdhani';
+  src: url('../assets/font/Rajdhani-Medium.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'rajdhani';
+  src: url('../assets/font/Rajdhani-Light.ttf') format('truetype');
+  font-weight: 700;
+}
+
+
+@font-face {
+  font-family: 'rajdhani';
+  src: url('../assets/font/Rajdhani-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+
+body {
+  font-family: 'rajdhani', sans-serif;
 }
 
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  text-decoration: none;
   list-style: none;
   box-shadow: none;
   border: none;
   outline: none;
   transition: all 0.3s ease;
   scroll-behavior: smooth;
-  color: #fff;
+  color: var(--whiteColor);
+  text-decoration: none;
+  font-family: 'rajdhani', sans-serif;
 }
 
-.rajdhani-light {
-  font-family: "Rajdhani", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.rajdhani-regular {
-  font-family: "Rajdhani", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.rajdhani-medium {
-  font-family: "Rajdhani", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.rajdhani-semibold {
-  font-family: "Rajdhani", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.rajdhani-bold {
-  font-family: "Rajdhani", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-
-body {
-  font-family: 'rajdhani-regular', sans-serif;
-}
 
 /* BackGround */
 
 .bgc {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    background-color: #0a0a0a;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #0a0a0a;
 }
 
 .circle {
@@ -195,7 +197,6 @@ body {
 
 
 .logoName {
-  font-family: 'rajdhani-bold', monospace;
   font-size: 25px;
   margin-left: 10px;
   font-weight: 900;
@@ -329,12 +330,15 @@ body {
 .links ul li a{
   font-size: 16px;  
   text-transform: uppercase;
-  color: #ffff;
+  color: var(--whiteColor);
   opacity: 0.7;
+  text-decoration: none;
 }
 
 /* Golbel Sections */
 .section {
+  min-height: 100vh;
+  padding: 20px;
   position: relative;
 }
 
@@ -356,7 +360,6 @@ body {
 .mianTitle {
   font-size: clamp(3rem, 15vw, 4rem);
   font-weight: 900;
-  font-family: 'rajdhani-bold', sans-serif;
 }
 
 .mainP {
@@ -392,19 +395,36 @@ body {
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
   display: inline-block;
   text-align: center;
 }
 
+.buttonAfter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--mainGradient);
+  width: 200%;
+  height: 200%;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.button:hover .buttonAfter {
+  opacity: 1;
+}
+
+
+
 .button a {
   font-size: 1.2rem;
-  text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-family: 'rajdhani-bold', monospace;
-  font-weight: 700;
   text-align: center;
+  text-decoration: none;
 }
 
 .start {
@@ -414,7 +434,7 @@ body {
 }
 
 .start a {
-  color: white;
+  color: var(--whiteColor);
 }
 
 .learnMore {
@@ -427,7 +447,7 @@ body {
 
 .start:hover {
   background: var(--mainGradient);
-  color: white;
+  color: var(--whiteColor);
   box-shadow: 0 0 30px rgba(255, 94, 0, 0.5);
 }
 
@@ -439,6 +459,14 @@ body {
   box-shadow: 0 0 30px rgba(255, 94, 0, 0.5);
 }
 
+
+.button:hover {
+  border-color: var(--whiteColor);
+}
+.button:hover a {
+  color: var(--whiteColor);
+
+}
 
 @media (max-width: 768px) {
   .choise {
@@ -457,10 +485,109 @@ body {
 
 
 
+/* Features */
+
+.features {
+  min-height: 100vh;
+}
+
+.headFeatures {
+  font-size: clamp(3rem, 15vw, 4rem);
+  font-weight: bold;
+  text-transform: uppercase;
+  background: var(--mainGradient);
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+
+.features-details {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+.feature-style {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 94, 0, 0.2);  
+  border-radius: 10px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  min-height: 400px;
+  gap: 15px;
+  max-height: fit-content;
+}
 
 
 
+.features-details .feature-buttons .designButton    {
+  color: var(--whiteColor);
+  min-width: 200px;
+  padding: 12px 25px;
+  position: relative;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  text-align: start;
+}
 
+@media (max-width: 768px) {
+  .features {
+    padding: 20px;
+  }
+  .features-details {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.features-details .feature-buttons .designButton:hover {
+  background: rgba(255, 94, 0, 0.1);
+  border-color: rgba(255, 94, 0, 0.3);
+  color: var(--whiteColor);
+}
+
+.features-details .feature-buttons .active {
+  background: linear-gradient(45deg, rgba(255, 94, 0, 0.2), rgba(0, 178, 255, 0.2));
+  border-color: #FF5E00;
+  box-shadow: 0 0 20px rgba(255, 94, 0, 0.3);
+}
+
+
+.features-details .feature-content {
+  padding: 40px;
+}
+
+.features-details .headForFeatures {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  background: linear-gradient(45deg, #ffffff, #FF5E00);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+}
+
+.dec {
+  font-size: 1.2rem;
+}
+
+.item {
+  font-size: 1rem;
+  position: relative;
+}
+
+.item-1::after,.item-2::after,.item-3::after,.item-4::after,.item-5::after,.item-6::after {
+  content: "▸";
+  position: absolute;
+  left: -25px;
+  top: 50%; 
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: var(--mainColor);
+}
 
 
 /* Anmation */
