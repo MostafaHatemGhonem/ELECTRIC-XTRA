@@ -99,7 +99,7 @@ function ChangingText({ messages }: { messages: string[] }) {
 
 function Home() {
   return (
-    <section id="home" className="home section" style={{ height: "100vh" }}>
+    <section id="home" className="home section">
       <div className="content">
         <div className="home-content">
           <h1 className='mianTitle'>
@@ -199,7 +199,7 @@ function Features() {
   const current = features[activeFeature]; // here i add type to current
 
   return (
-    <section id="features" className="features section" style={{ height: "100vh" }}>
+    <section id="features" className="features section">
       <h2 className="headFeatures">Core Features</h2>
 
       <div className="features-details">
@@ -231,7 +231,7 @@ function Features() {
 
 function About() {
   return (
-    <section id="about" className='about section' style={{ height: "100vh" }}>
+    <section id="about" className='about section'>
       <h1>About</h1>
     </section>
   );
@@ -239,7 +239,7 @@ function About() {
 
 function Contact() {
   return (
-    <section id="contact" className='contact section' style={{ height: "100vh" }}>
+    <section id="contact" className='contact section'>
       <h1>Contact</h1>
     </section>
   );
