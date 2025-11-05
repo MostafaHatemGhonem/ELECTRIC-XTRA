@@ -429,6 +429,8 @@ body {
   letter-spacing: 0.1em;
   text-align: center;
   text-decoration: none;
+  position: relative;
+  z-index: 100;
 }
 
 .start {
