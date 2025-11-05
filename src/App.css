@@ -343,6 +343,9 @@ body {
 }
 
 /* Home */
+.home {
+  padding: 100px;
+}
 
 .content {
   position: absolute;
