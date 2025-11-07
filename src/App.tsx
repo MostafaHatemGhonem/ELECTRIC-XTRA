@@ -232,7 +232,49 @@ function Features() {
 function About() {
   return (
     <section id="about" className='about section'>
-      <h1>About</h1>
+      <h1 className="aboutTitle">About Electric Xtra</h1>
+      <div className="pioneeringOne pioneering">
+        <div className="description">
+          <h2 className="title">Pioneering the Digital Frontier</h2>
+          <p className="dec1 decr">
+            At ELECTRIC XTRA, we're not just building technology – we're crafting the future. Our mission is to bridge the gap between human potential and digital innovation, creating solutions that empower individuals and transform industries.
+          </p>
+          <p className="dec2 decr">
+            Founded by visionaries who saw beyond the limitations of current technology, ELECTRIC XTRA represents a quantum leap in digital infrastructure. We combine cutting-edge research with practical applications to deliver solutions that are both revolutionary and reliable.
+          </p>
+          <p className="dec3 decr">
+            Join us as we redefine what's possible in the digital age. The future isn't something that happens to us – it's something we create together.
+          </p>
+        </div>
+        <div className="designSquare">
+          <div className="mainSquare">
+            <div className="secondSquare">
+              <div className="thirdSquare"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="pioneeringTwo pioneering">
+        <div className="designSquares">
+          <div className="mainSquers">
+            <div className="squers"></div>
+            <div className="squers"></div>
+            <div className="squers"></div>
+          </div>
+        </div>
+        <div className="description">
+          <h2 className="title">Innovation at Every Level</h2>
+          <p className="dec1 decr">
+            Our commitment to excellence drives us to push boundaries and challenge conventions. With a team of world-class engineers, designers, and visionaries, we're creating solutions that not only meet today's needs but anticipate tomorrow's challenges.
+          </p>
+          <p className="dec2 decr">
+            From quantum computing to neural networks, from blockchain to AI, we're at the forefront of every technological revolution. Our integrated approach ensures that each innovation builds upon the last, creating a synergy that amplifies our impact.
+          </p>
+          <p className="dec3 decr">
+            Experience the power of true digital transformation. With ELECTRIC XTRA, you're not just adopting technology – you're embracing a philosophy of continuous evolution and limitless possibility.
+          </p>
+        </div>
+      </div>
     </section>
   );
 }
@@ -240,7 +282,71 @@ function About() {
 function Contact() {
   return (
     <section id="contact" className='contact section'>
-      <h1>Contact</h1>
+      <h1 className="contactTitle">get in touch</h1>
+      <div className="containerContact">
+        <div className="contactForm">
+          <form id="contactForm">
+            <div className="contName const">
+              <label htmlFor="nameForm " className='labelForm'>Name</label>
+              <input required type="text" id="nameForm "className='inputForm' />
+            </div>
+            <div className="contEmail const">
+              <label htmlFor="emailForm " className='labelForm'>Email</label>
+              <input required type="text" id='emailForm 'className='inputForm' />
+            </div>
+            <div className="contSubject const">
+              <label htmlFor="subjectForm " className='labelForm'>Subject</label>
+              <input required type="text" id='subjectForm 'className='inputForm' />
+            </div>
+            <div className="contMessage const">
+              <label htmlFor="messageForm " className='labelForm'>Message</label>
+              <textarea required className="inputForm textArea" name="message" id="messageForm "></textarea>
+            </div>
+            <button type='submit' className='subimt subimt-btn'>Send Message</button>
+          </form>
+        </div>
+        <div className="contactInfo">
+          <div className="container-info">
+            <h3 className="contactTitle infoTitleContact">Contact With Us</h3>
+            <div className="info-item">
+              <div className="info-icon">📧</div>
+              <div className="info-details">
+                <h4 className="info-title">Email</h4>
+                <p className="info-text">mostafahatemghonem@gmail.com</p>
+              </div>
+            </div>
+            <div className="info-item">
+              <div className="info-icon">📱</div>
+              <div className="info-details">
+                <h4 className="info-title">Phone</h4>
+                <p className="info-text">+201096708977</p>
+              </div>
+            </div>
+            <div className="info-item">
+              <div className="info-icon">📍</div>
+              <div className="info-details">
+                <h4 className="info-title">Location</h4>
+                <p className="info-text">Elmasoura</p>
+              </div>
+            </div> 
+          </div> 
+          <div className="conatiner-maps">
+            <div className="plaseholder">
+              <p>Interactive Map</p>
+              <p>Neo Tokyo, Sector 7</p>  
+            </div>
+            <div className="overlay"></div>  
+          </div>      
+        </div>
+      </div>
+      <footer className='footer'>
+        <ul className='linksFooter'>
+          <a href="#home">Privacy Policy</a>
+          <a href="#home">Terms of Service</a>
+          <a href="#home">Careers</a>
+        </ul>
+        <p className="p">© 2025 ELECTRIC XTRA. All rights reserved. Building tomorrow, today. | Design: <span>Mostafa Hatem</span></p>
+      </footer>
     </section>
   );
 }
