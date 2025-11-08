@@ -824,9 +824,6 @@ body {
 }
 
 /* About */
-.contact {
-
-}
 
 .contactTitle {
   text-transform: uppercase;
@@ -927,9 +924,7 @@ body {
   align-items: center;
 
 }
-.info-details {
 
-}
 
 .info-title {
   color: var(--mainColor);
@@ -937,7 +932,7 @@ body {
 
 .info-text {
   opacity: 0.7;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .conatiner-maps {
@@ -980,6 +975,7 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 .linksFooter {
@@ -1144,6 +1140,8 @@ body {
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease;
+    top: 289px;
+    padding: 30px;
   }
 
   .links.active {

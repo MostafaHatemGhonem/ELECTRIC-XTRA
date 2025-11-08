@@ -339,6 +339,12 @@ function Contact() {
           </div>      
         </div>
       </div>
+    </section>
+  );
+}
+
+function Footer() {
+  return (
       <footer className='footer'>
         <ul className='linksFooter'>
           <a href="#home">Privacy Policy</a>
@@ -347,9 +353,9 @@ function Contact() {
         </ul>
         <p className="p">© 2025 ELECTRIC XTRA. All rights reserved. Building tomorrow, today. | Design: <span>Mostafa Hatem</span></p>
       </footer>
-    </section>
-  );
+  )
 }
+
 
 function App() {
   return (
@@ -360,6 +366,7 @@ function App() {
       <Features />
       <About />
       <Contact />
+      <Footer />
     </>
   );
 }
